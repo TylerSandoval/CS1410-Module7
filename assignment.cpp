@@ -12,7 +12,9 @@ private:
     unsigned int count;         // count
 
 public:
-    Counter(): count(0)         // constructor
+    Counter(): count(0)         // constructor w/ no args
+    {};
+    Counter(int c): count(c)   // constructor with one arg
     {};
     unsigned int get_count()    // returns count
     {
@@ -23,9 +25,10 @@ public:
     Counter operator ++()          // increment prefix
     {
         ++count;
-        Counter temp;          // create temporary class object
-        temp.count = count;    // increment the count of the temp object
-        return temp;           // return the temp object, with now incremented count
+        //Counter temp;          // create temporary class object
+        //temp.count = count;    // increment the count of the temp object
+        //return temp;           // return the temp object, with now incremented count
+        return Counter(count);
     }
 
 };
