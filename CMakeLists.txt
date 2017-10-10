@@ -4,5 +4,7 @@ project(Module7)
 set(CMAKE_CXX_STANDARD 11)
 
 #set(SOURCE_FILES Unary.cpp)
-set(SOURCE_FILES assignment.cpp)
+#set(SOURCE_FILES assignment.cpp)
+set(SOURCE_FILES binaryOperator.cpp)
+
 add_executable(Module7 ${SOURCE_FILES})
